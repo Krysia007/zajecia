@@ -28,6 +28,13 @@ public class Trainee
             
     }
     
+
+    public String sayGreetings() {
+		
+		String greet = "No witam witam, dzien dobry";
+        return greet; 
+	}
+
     public boolean enter(ClassRoom ourRoom) 
 	{
 		if (ourRoom.getIsOpen())
@@ -40,6 +47,7 @@ public class Trainee
 		{
 			return false;
 		}
+
     }
 
     public String getName ()
