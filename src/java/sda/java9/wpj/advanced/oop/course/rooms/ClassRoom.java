@@ -54,24 +54,36 @@ public class ClassRoom {
 		this.board = board;
 	}
 	
-	public void setChair(){
+	public void setChair(Chair[] chairs){
 		this.chairs = chairs;
 	}
 	
-	public void setTable(){
+	public void setTable(Table[] tables){
 		this.tables = tables;
 	}
 	
-	public void setCourseManager(){
+	public void setCourseManager(CourseManager courseManager){
 		this.courseManager = courseManager;
 	}
 	
-	public void setTrainees(){
+	public void setTrainees(Trainee[] trainees){
 		this.trainees = trainees;
 	}
 	
-	public void setTrainer(){
+	public void setTrainer(Trainer trainer){
 		this.trainer = trainer;
+	}
+	
+	// METODY
+	
+	public void addTrainee(Trainee trainee){
+		for (int i = 0; i < this.trainees.length; i++){
+			if (this.trainees[i] == null) {
+				trainees[i] = trainee;
+				System.out.println("Dodano uczestnika: " + trainee.getName());
+			}
+		}
+		
 	}
 	
 }
