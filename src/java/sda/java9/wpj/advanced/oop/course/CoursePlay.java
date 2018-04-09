@@ -13,7 +13,23 @@ public class CoursePlay {
         
         // Uczestnik Kursu próbuje wejść do Sali szkoleniowej, ale jest zamknięta.
         ClassRoom ourRoom = new ClassRoom();
+        boolean success = firstTrainee.enter(ourRoom);
+        System.out.println("Czy udalo sie wejsc do sali: " + success);
         
+        // Pojawia się Menedżer kursu i przedstawia się. Uczestnik kursu przedstawia się.
+        CourseManager manager = new CourseManager();
+        manager.setFirstName("Krzysiu");
+        manager.setLastName("Matuszewski");
+        manager.setPhoneNumber("888");
+        manager.setEmail("krzysztof.matuszewski@sda.pl");
+        String managerGreetings = manager.sayGreetings();
+        System.out.println(managerGreetings);
+        
+        firstTrainee.setFirstName("Michal");
+        firstTrainee.setLastName("Czyzowicz");
+        String traineeGreetings = manager.sayGreetings();
+        System.out.println(traineeGreetings);
+            
         
         
         
