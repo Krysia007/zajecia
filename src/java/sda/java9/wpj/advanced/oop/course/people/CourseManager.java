@@ -8,9 +8,10 @@ public class CourseManager {
 	private String phoneNumber;
     
     public String sayGreetings() {
-        return "";
+        return "Witajcie na kursie Java";
     }
-        
+     
+	 
 	
 	public String getFirstName() {
 		return firstName;
