@@ -25,9 +25,6 @@ public class Trainee
             
     }
     
-    public boolean enter(ClassRoom room) {
-        return false;
-    }
 
     public String getName ()
     {

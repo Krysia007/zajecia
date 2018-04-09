@@ -82,6 +82,7 @@ public class ClassRoom {
 			if (this.trainees[i] == null) {
 				trainees[i] = trainee;
 				added = true;
+				System.out.println("Dodano uczestnika: " + trainee.getName());
 			}
 		}
 		if (added = true) {
