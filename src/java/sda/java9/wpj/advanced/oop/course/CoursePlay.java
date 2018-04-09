@@ -27,8 +27,10 @@ public class CoursePlay {
         
         firstTrainee.setFirstName("Michal");
         firstTrainee.setLastName("Czyzowicz");
-        String traineeGreetings = manager.sayGreetings();
+        String traineeGreetings = firstTrainee.sayGreetings();
         System.out.println(traineeGreetings);
+        
+        
             
         
         

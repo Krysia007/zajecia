@@ -1,5 +1,6 @@
 package sda.java9.wpj.advanced.oop.course.people;
 
+import sda.java9.wpj.advanced.oop.course.rooms.*;
 import sda.java9.wpj.advanced.oop.course.rooms.ClassRoom;
 
 public class Trainee 
