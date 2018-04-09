@@ -1,5 +1,6 @@
 package sda.java9.wpj.advanced.oop.course.people;
 
+import sda.java9.wpj.advanced.oop.course.rooms.*;
 import sda.java9.wpj.advanced.oop.course.rooms.ClassRoom;
 
 public class Trainee 
@@ -11,8 +12,7 @@ public class Trainee
     private boolean fullTrainiesCup;
     private String trainiesDinner;
     private String trainiesTrener;
-    public boolean ourRoomIsOpen;
-	
+    private ClassRoom classRoom;
 	
     public Trainee() {}
 
@@ -27,20 +27,21 @@ public class Trainee
         this.trainiesTrener = trainiesTrener;
             
     }
-    
 
 
     public String sayGreetings() {
 		
-		String greet = "No witam witam, dzien dobry";
+		String greet = "No witam witam, dzien dobry. Jestem " + this.name;
         return greet; 
 	}
 
     public boolean enter(ClassRoom ourRoom) 
 	{
-		if (ourRoomIsOpen)
+		if (ourRoom.getIsOpen())
 		{
-			return true;
+			this.classRoom = ourRoom;
+            ourRoom.addTrainee(this);
+            return true;
 		}	
 		else 
 		{

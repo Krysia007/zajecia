@@ -12,7 +12,7 @@ public class CoursePlay {
         Trainee firstTrainee = new Trainee();
         
         // Uczestnik Kursu próbuje wejść do Sali szkoleniowej, ale jest zamknięta.
-        ClassRoom ourRoom = new ClassRoom();
+        ClassRoom ourRoom = new ClassRoom(20);
         boolean success = firstTrainee.enter(ourRoom);
         System.out.println("Czy udalo sie wejsc do sali: " + success);
         
@@ -25,10 +25,18 @@ public class CoursePlay {
         String managerGreetings = manager.sayGreetings();
         System.out.println(managerGreetings);
         
-        firstTrainee.setFirstName("Michal");
-        firstTrainee.setLastName("Czyzowicz");
-        String traineeGreetings = manager.sayGreetings();
+        firstTrainee.setName("Michal");
+        String traineeGreetings = firstTrainee.sayGreetings();
         System.out.println(traineeGreetings);
+        
+        // Menedżer kursu otwiera Salę szkoleniową i wchodzi do niej.
+        manager.openRoom(ourRoom);
+        manager.enterRoom(ourRoom);
+        System.out.println(manager.getRoom());
+        
+        
+        
+        
             
         
         

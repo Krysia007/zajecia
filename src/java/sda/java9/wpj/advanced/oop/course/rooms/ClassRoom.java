@@ -15,6 +15,10 @@ public class ClassRoom {
 	boolean isOpen; 
 	
 	// GETERY
+    
+    public ClassRoom(int roomSize) {
+        trainees = new Trainee[roomSize];
+    }
 	
 	public ClassRoom(int roomSize){
 		trainees = new Trainee[roomSize];
@@ -86,7 +90,8 @@ public class ClassRoom {
 			if (this.trainees[i] == null) {
 				trainees[i] = trainee;
 				added = true;
-				break;
+
+                break;
 			}
 		}
 		if (added = true) {
