@@ -15,6 +15,15 @@ public class CoursePlay {
         ClassRoom ourRoom = new ClassRoom();
         boolean success = firstTrainee.enter(ourRoom);
         System.out.println("Czy udalo sie wejsc do sali: " + success);
+        
+        // Pojawia się Menedżer kursu i przedstawia się. Uczestnik kursu przedstawia się.
+        CourseManager manager = new CourseManager();
+        manager.setFirstName("Krzysiu");
+        manager.setLastName("Matuszewski");
+        manager.setPhoneNumber("888");
+        manager.setEmail("krzysztof.matuszewski@sda.pl");
+        System.out.println("Cześć, jestem " + manager.getFirstName() + " " + manager.getLastName());
+        String managerGreetings = manager.sayGreetings();
             
         
         
