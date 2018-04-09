@@ -1,5 +1,6 @@
 package sda.java9.wpj.advanced.oop.course.people;
 
+import sda.java9.wpj.advanced.oop.course.rooms.ClassRoom;
 
 public class Trainee 
 {
@@ -25,8 +26,10 @@ public class Trainee
             
     }
     
-    public boolean enter(ClassRoom room) {
-        return false;
+    public String sayGreetings() {
+		
+		String greet = "No witam witam, dzien dobry";
+        return greet; 
     }
 
     public String getName ()
