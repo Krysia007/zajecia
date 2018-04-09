@@ -77,11 +77,17 @@ public class ClassRoom {
 	// METODY
 	
 	public void addTrainee(Trainee trainee){
+		Boolean added = false;
 		for (int i = 0; i < this.trainees.length; i++){
 			if (this.trainees[i] == null) {
 				trainees[i] = trainee;
-				System.out.println("Dodano uczestnika: " + trainee.getName());
+				added = true;
 			}
+		}
+		if (added = true) {
+			System.out.println("Dodano uczestnika: " + trainee.getName());
+		} else {
+			System.out.println("Brak miejsca");
 		}
 		
 	}
