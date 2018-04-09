@@ -16,6 +16,10 @@ public class ClassRoom {
 	
 	// GETERY
 	
+	public ClassRoom(int roomSize){
+		trainees = new Trainee[roomSize];
+	}
+	
 	public boolean getIsOpen(){
 		return isOpen;
 	}
@@ -82,7 +86,7 @@ public class ClassRoom {
 			if (this.trainees[i] == null) {
 				trainees[i] = trainee;
 				added = true;
-				System.out.println("Dodano uczestnika: " + trainee.getName());
+				break;
 			}
 		}
 		if (added = true) {
@@ -91,6 +95,22 @@ public class ClassRoom {
 			System.out.println("Brak miejsca");
 		}
 		
+	}
+	
+	public void removeTrainee(Trainee trainee){
+		Boolean removed = false;
+		for (int i = 0; i < this.trainees.length; i++){
+			if (this.trainees[i] == trainee) {
+				trainees[i] = null;
+				removed = true;
+				break;
+			}
+		}
+		if (removed = true) {
+			System.out.println("Usunieto uczestnika: " + trainee.getName());
+		} else {
+			System.out.println("Nie znaleziono uczestnika: " + trainee.getName());
+		}
 	}
 	
 }
