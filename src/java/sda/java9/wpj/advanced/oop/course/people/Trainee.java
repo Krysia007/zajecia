@@ -12,8 +12,7 @@ public class Trainee
     private boolean fullTrainiesCup;
     private String trainiesDinner;
     private String trainiesTrener;
-    public boolean ourRoomIsOpen;
-	
+    private ClassRoom classRoom;
 	
     public Trainee() {}
 
@@ -31,9 +30,11 @@ public class Trainee
     
     public boolean enter(ClassRoom ourRoom) 
 	{
-		if (ourRoomIsOpen)
+		if (ourRoom.getIsOpen())
 		{
-			return true;
+			this.classRoom = ourRoom;
+            ourRoom.addTrainee(this);
+            return true;
 		}	
 		else 
 		{
