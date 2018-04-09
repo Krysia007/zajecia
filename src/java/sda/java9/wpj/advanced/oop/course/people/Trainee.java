@@ -12,7 +12,9 @@ public class Trainee
     private boolean fullTrainiesCup;
     private String trainiesDinner;
     private String trainiesTrener;
-    
+    public boolean ourRoomIsOpen;
+	
+	
     public Trainee() {}
 
     public Trainee (String name, String TrainiesLaptop, boolean attendanceOfTrainee, String lateTrainies, boolean fullTrainiesCup, String TraineesDinner, String traineesTrener)
@@ -27,8 +29,16 @@ public class Trainee
             
     }
     
-    public boolean enter(ClassRoom room) {
-        return false;
+    public boolean enter(ClassRoom ourRoom) 
+	{
+		if (ourRoomIsOpen)
+		{
+			return true;
+		}	
+		else 
+		{
+			return false;
+		}
     }
 
     public String getName ()
@@ -71,5 +81,9 @@ public class Trainee
         this.trainiesLaptop = trainiesLaptop;
     }
 
-        
+public void setTrainiesDinner (String name)
+{
+	this.trainiesDinner = trainiesDinner;
+}
+    
 }
