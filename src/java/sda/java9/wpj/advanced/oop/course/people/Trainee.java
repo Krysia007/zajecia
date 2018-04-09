@@ -64,5 +64,10 @@ public void setTrainiesLaptop (String name)
 	this.trainiesLaptop = trainiesLaptop;
 }
 
+public void setTrainiesDinner (String name)
+{
+	this.trainiesDinner = trainiesDinner;
+}
     
+
 }
