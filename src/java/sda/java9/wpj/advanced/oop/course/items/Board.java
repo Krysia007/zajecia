@@ -2,21 +2,21 @@ package sda.java9.wpj.advanced.oop.course.items;
 
 public class Board {
     
-	private String clean;
-	private String sponge;
-	private String freeSpace;
+	private boolean clean;
+	private boolean sponge;
+	private boolean freeSpace;
 	private String boardColor;
 
 	
-	public String getClean(){
+	public boolean getClean(){
 		return clean;
 	}
 	
-	public String getSponge(){
+	public boolean getSponge(){
 		return sponge;
 	}
 	
-	public String getFreeSpace(){
+	public boolean getFreeSpace(){
 		return freeSpace;
 	}
 	
@@ -24,15 +24,15 @@ public class Board {
 		return boardColor;
 	}
 	
-	public void setClean(String clean){
+	public void setClean(boolean clean){
 		this.clean = clean;
 	}
 	
-	public void setSponge(String sponge){
+	public void setSponge(boolean sponge){
 		this.sponge = sponge;
 	}
 	
-	public void setFreeSpace(String freeSpace){
+	public void setFreeSpace(boolean freeSpace){
 		this.freeSpace = freeSpace;
 	}
 	
