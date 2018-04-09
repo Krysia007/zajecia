@@ -1,14 +1,36 @@
 package sda.java9.wpj.advanced.oop.course.people;
 
+import sda.java9.wpj.advanced.oop.course.rooms.*;
+
 public class CourseManager {
 	
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String phoneNumber;
+    private ClassRoom classRoom;
     
     public String sayGreetings() {
         return "";
+    }
+    
+    public void openRoom(ClassRoom room) {
+        room.setIsOpen(true);
+    }
+    
+    public void enterRoom(ClassRoom room) {
+        if (!room.getIsOpen()) {
+            if (room.getCourseManager() != null) {
+                throw new IllegalStateException("Menedzer juz jest w pokoju!");
+            }
+            this.openRoom(room);
+        }
+        this.classRoom = room;
+        room.setCourseManager(this);
+    }
+    
+    public ClassRoom getRoom() {
+        return classRoom;
     }
         
 	

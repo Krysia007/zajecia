@@ -29,6 +29,13 @@ public class CoursePlay {
         String traineeGreetings = firstTrainee.sayGreetings();
         System.out.println(traineeGreetings);
         
+        // Menedżer kursu otwiera Salę szkoleniową i wchodzi do niej.
+        manager.openRoom(ourRoom);
+        manager.enterRoom(ourRoom);
+        System.out.println(manager.getRoom());
+        
+        
+        
         
             
         
