@@ -7,13 +7,13 @@ public class WaterMachine {
 	private int coldWater = 0;
 	private int hotWater = 0;
 
-	/*public WaterMachine (int capacity, int coldWater, int hotWater){
+	public WaterMachine (int capacity, int coldWater, int hotWater){
 		
 	this.capacity = capacity;
 	this.coldWater = coldWater;
 	this.hotWater = hotWater;
 	}
-	*/
+	
 	
 	public int getCapcity() {
 		return capacity;
@@ -26,13 +26,13 @@ public class WaterMachine {
 	}
 	
 	public void int setCapacity(){
-		this.capacity = capacity;
+		return capacity;
 	}
 	public void int setColdWater(){
-		this.coldWater = coldWater;
+		return coldWater;
 	}
 	public void int setHotWater(){
-		this.hotWater = hotWater;
+		return hotWater;
 	}
 	
 	
