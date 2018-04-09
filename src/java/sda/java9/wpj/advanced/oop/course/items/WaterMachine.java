@@ -3,9 +3,9 @@ package sda.java9.wpj.advanced.oop.course.items;
 public class WaterMachine {
 		
 
-	private int capacity = 0;
-	private int coldWater = 0;
-	private int hotWater = 0;
+	private int capacity;
+	private int coldWater;
+	private int hotWater;
 
 	public WaterMachine (int capacity, int coldWater, int hotWater){
 		
@@ -25,14 +25,14 @@ public class WaterMachine {
 		return hotWater;
 	}
 	
-	public void int setCapacity(){
-		return capacity;
+	public void setCapacity(int capacity){
+		this.capacity = capacity;
 	}
-	public void int setColdWater(){
-		return coldWater;
+	public void setColdWater(int coldWater){
+		this.coldWater = coldWater;
 	}
-	public void int setHotWater(){
-		return hotWater;
+	public void setHotWater(int hotWater){
+		this.hotWater = hotWater;
 	}
 	
 	
