@@ -11,7 +11,7 @@ public class CourseManager {
     private ClassRoom classRoom;
     
     public String sayGreetings() {
-        return "";
+        return "Witajcie na kursie Java";
     }
     
     public void openRoom(ClassRoom room) {
@@ -32,7 +32,6 @@ public class CourseManager {
     public ClassRoom getRoom() {
         return classRoom;
     }
-        
 	
 	public String getFirstName() {
 		return firstName;
