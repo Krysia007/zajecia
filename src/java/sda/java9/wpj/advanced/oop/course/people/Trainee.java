@@ -1,7 +1,8 @@
 package sda.java9.wpj.advanced.oop.course.people;
 
 import sda.java9.wpj.advanced.oop.course.rooms.*;
-import sda.java9.wpj.advanced.oop.course.rooms.ClassRoom;
+import sda.java9.wpj.advanced.oop.course.content.*;
+import sda.java9.wpj.advanced.oop.course.items.*;
 
 public class Trainee 
 {
@@ -13,8 +14,14 @@ public class Trainee
     private String trainiesDinner;
     private String trainiesTrener;
     private ClassRoom classRoom;
+    private Chair myChair;
+    private Table myTable;
 	
     public Trainee() {}
+    
+    public Trainee(String name) {
+        this.name = name;
+    }
 
     public Trainee (String name, String TrainiesLaptop, boolean attendanceOfTrainee, String lateTrainies, boolean fullTrainiesCup, String TraineesDinner, String traineesTrener)
     {

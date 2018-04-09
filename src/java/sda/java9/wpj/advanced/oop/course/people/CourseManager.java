@@ -1,6 +1,7 @@
 package sda.java9.wpj.advanced.oop.course.people;
 
 import sda.java9.wpj.advanced.oop.course.rooms.*;
+import sda.java9.wpj.advanced.oop.course.content.*;
 
 public class CourseManager {
 	
@@ -27,6 +28,10 @@ public class CourseManager {
         }
         this.classRoom = room;
         room.setCourseManager(this);
+    }
+    
+    public String sayCourseInfo(Course course) {
+        return "Witacie, to jest kurs " + course.getTitle() + ". Ten kurs jest o " + course.getShortDescription();
     }
     
     public ClassRoom getRoom() {
