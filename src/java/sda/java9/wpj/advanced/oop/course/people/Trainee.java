@@ -27,11 +27,10 @@ public class Trainee
         this.trainiesTrener = trainiesTrener;
             
     }
-    
 
     public String sayGreetings() {
 		
-		String greet = "No witam witam, dzien dobry";
+		String greet = "No witam witam, dzien dobry. Jestem " + this.name;
         return greet; 
 	}
 
