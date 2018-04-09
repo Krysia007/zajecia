@@ -6,6 +6,11 @@ public class CourseManager {
 	private String lastName;
 	private String email;
 	private String phoneNumber;
+    
+    public String sayGreetings() {
+        return "";
+    }
+        
 	
 	public String getFirstName() {
 		return firstName;
@@ -23,7 +28,7 @@ public class CourseManager {
 		return phoneNumber;
 	}
 	
-	public void setFistName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 	public void setLastName(String lastName) {
