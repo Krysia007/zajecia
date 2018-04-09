@@ -24,6 +24,10 @@ public class Trainee
         this.trainiesTrener = trainiesTrener;
             
     }
+    
+    public boolean enter(ClassRoom room) {
+        return false;
+    }
 
     public String getName ()
     {
