@@ -22,8 +22,13 @@ public class CoursePlay {
         manager.setLastName("Matuszewski");
         manager.setPhoneNumber("888");
         manager.setEmail("krzysztof.matuszewski@sda.pl");
-        System.out.println("Cześć, jestem " + manager.getFirstName() + " " + manager.getLastName());
         String managerGreetings = manager.sayGreetings();
+        System.out.println(managerGreetings);
+        
+        firstTrainee.setFirstName("Michal");
+        firstTrainee.setLastName("Czyzowicz");
+        String traineeGreetings = manager.sayGreetings();
+        System.out.println(traineeGreetings);
             
         
         
