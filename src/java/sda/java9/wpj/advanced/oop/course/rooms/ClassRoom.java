@@ -15,10 +15,6 @@ public class ClassRoom {
 	boolean isOpen; 
 	
 	// GETERY
-    
-    public ClassRoom(int roomSize) {
-        trainees = new Trainee[roomSize];
-    }
 	
 	public ClassRoom(int roomSize){
 		trainees = new Trainee[roomSize];
