@@ -8,5 +8,14 @@ public class CoursePlay {
     
     public static void main(String[] args) {
         
+        // Pojawia się pierwszy Uczestnik kursu. 
+        Trainee firstTrainee = new Trainee();
+        
+        // Uczestnik Kursu próbuje wejść do Sali szkoleniowej, ale jest zamknięta.
+        ClassRoom ourRoom = new ClassRoom();
+        
+        
+        
+        
     }
 }
