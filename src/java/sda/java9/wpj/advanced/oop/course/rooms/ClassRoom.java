@@ -13,73 +13,7 @@ public class ClassRoom {
 	private Trainee[] trainees;
 	private Trainer trainer;
 	boolean isOpen; 
-	
-	// GETERY
-	
-	public ClassRoom(int roomSize){
-		trainees = new Trainee[roomSize];
-	}
-	
-	public boolean getIsOpen(){
-		return isOpen;
-	}
-	
-	public Board getBoard(){
-		return board;
-	}
-	
-	public Chair[] getChair(){
-		return chairs;
-	}
-	
-	public Table[] getTable(){
-		return tables;
-	}
-	
-	public CourseManager getCourseManager(){
-		return courseManager;
-	}
-	
-	public Trainee[] getTrainees(){
-		return trainees;
-	}
-	
-	public Trainer getTrainer(){
-		return trainer;
-	}
-	
-	// SETERY
-	
-	public void setIsOpen(boolean isOpen){
-		this.isOpen = isOpen;
-	}
-	
-	public void setBoard(Board board){
-		this.board = board;
-	}
-	
-	public void setChair(Chair[] chairs){
-		this.chairs = chairs;
-	}
-	
-	public void setTable(Table[] tables){
-		this.tables = tables;
-	}
-	
-	public void setCourseManager(CourseManager courseManager){
-		this.courseManager = courseManager;
-	}
-	
-	public void setTrainees(Trainee[] trainees){
-		this.trainees = trainees;
-	}
-	
-	public void setTrainer(Trainer trainer){
-		this.trainer = trainer;
-	}
-	
-	// METODY
-	
+    
 	public void addTrainee(Trainee trainee){
 		Boolean added = false;
 		for (int i = 0; i < this.trainees.length; i++){
@@ -114,4 +48,63 @@ public class ClassRoom {
 		}
 	}
 	
+	public ClassRoom(int roomSize){
+		trainees = new Trainee[roomSize];
+	}
+	
+	public boolean getIsOpen(){
+		return isOpen;
+	}
+	
+	public Board getBoard(){
+		return board;
+	}
+	
+	public Chair[] getChair(){
+		return chairs;
+	}
+	
+	public Table[] getTable(){
+		return tables;
+	}
+	
+	public CourseManager getCourseManager(){
+		return courseManager;
+	}
+	
+	public Trainee[] getTrainees(){
+		return trainees;
+	}
+	
+	public Trainer getTrainer(){
+		return trainer;
+	}
+	
+	public void setIsOpen(boolean isOpen){
+		this.isOpen = isOpen;
+	}
+	
+	public void setBoard(Board board){
+		this.board = board;
+	}
+	
+	public void setChair(Chair[] chairs){
+		this.chairs = chairs;
+	}
+	
+	public void setTable(Table[] tables){
+		this.tables = tables;
+	}
+	
+	public void setCourseManager(CourseManager courseManager){
+		this.courseManager = courseManager;
+	}
+	
+	public void setTrainees(Trainee[] trainees){
+		this.trainees = trainees;
+	}
+	
+	public void setTrainer(Trainer trainer){
+		this.trainer = trainer;
+	}
 }
