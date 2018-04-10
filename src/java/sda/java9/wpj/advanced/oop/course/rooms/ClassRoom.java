@@ -12,7 +12,7 @@ public class ClassRoom {
 	private CourseManager courseManager;
 	private Trainee[] trainees;
 	private Trainer trainer;
-	boolean isOpen; 
+	private boolean isOpen; 
     
 	public void addTrainee(Trainee trainee){
 		Boolean added = false;
@@ -20,7 +20,6 @@ public class ClassRoom {
 			if (this.trainees[i] == null) {
 				trainees[i] = trainee;
 				added = true;
-
                 break;
 			}
 		}
@@ -46,10 +45,16 @@ public class ClassRoom {
 		} else {
 			System.out.println("[DEBUG] Nie znaleziono uczestnika: " + trainee.getName());
 		}
-	}
+	}	
 	
 	public ClassRoom(int roomSize){
 		trainees = new Trainee[roomSize];
+	}
+	
+	public ClassRoom (int roomSize, int numberOfTables){
+		trainees = new Trainee[roomSize];
+		tables = new Table[numberOfTables];
+		chairs = new Chair[(2 * numberOfTables)];
 	}
 	
 	public boolean getIsOpen(){
