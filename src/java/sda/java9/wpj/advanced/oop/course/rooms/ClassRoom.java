@@ -79,6 +79,16 @@ public class ClassRoom {
 		}
 	}
 	
+	public void addTableWithChairs(Table table){
+		addTable(table);
+		if (table.getFirstChair() != null){
+			addChair(table.getFirstChair());
+		}
+		if (table.getSecondChair() != null){
+			addChair(table.getSecondChair());
+		}
+	}
+	
 	public ClassRoom(int roomSize){
 		trainees = new Trainee[roomSize];
 	}
