@@ -24,7 +24,7 @@ public class Trainer {
     
     public String sayGreetings() {
         String greet = "Witajcie!";
-        greet += "\n\nBądźcie pozdrowieni szczęśliwi, który trafiliście na te zajęcia!";
+        greet += "\n\nBądźcie pozdrowieni szczęśliwi, którzy trafiliście na te zajęcia!";
         greet += "\nJESTEM... " + this.name.toUpperCase();
         return greet;
     }
