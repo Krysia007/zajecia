@@ -64,7 +64,7 @@ public class CourseManager {
     }
     
     public String sayCourseInfo(Course course) {
-        return "Witacie, to jest kurs " + course.getTitle() + ". Ten kurs jest o " + course.getShortDescription();
+        return "Witacie, to jest kurs " + course.getTitle() + ". Co mogę powiedzieć o kursie? " + course.getShortDescription();
     }
     
     public ClassRoom getRoom() {

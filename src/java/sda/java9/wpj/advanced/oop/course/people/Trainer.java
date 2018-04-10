@@ -22,6 +22,19 @@ public class Trainer {
         room.setTrainer(this);
     }  
     
+    public String sayGreetings() {
+        String greet = "Witajcie!";
+        greet += "\n\nBądźcie pozdrowieni szczęśliwi, który trafiliście na te zajęcia!";
+        greet += "\nJESTEM... " + this.name.toUpperCase();
+        return greet;
+    }
+    
+    public Trainer() {}
+    
+    public Trainer(String name) {
+        this.name = name;
+    }
+    
     public ClassRoom getRoom() {
         return classRoom;
     }  
