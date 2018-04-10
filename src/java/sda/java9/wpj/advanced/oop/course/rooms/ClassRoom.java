@@ -101,6 +101,22 @@ public class ClassRoom {
 	
 	public ClassRoom(int roomSize){
 		trainees = new Trainee[roomSize];
+        tables = new Table[roomSize / 2 + 1];
+        chairs = new Chair[tables.length * 2];
+        for (int i = 0; i < chairs.length; i++) {
+            chairs[i] = new Chair();
+        }
+        for (int i = 0; i < tables.length; i++) {
+            tables[i] = new Table();
+            tables[i].setFirstChair(chairs[i * 2]);
+            tables[i].setSecondChair(chairs[i * 2 + 1]);
+            /*
+            Chair freeChair = takeFreeChair();
+            tables[i].setFirtsChair(freeChair);
+            freeChair = tabkeFreeChair();
+            tables[i].setSecondChair(freeChair);
+            */
+        }
 	}
 	
 	public ClassRoom (int roomSize, int numberOfTables){

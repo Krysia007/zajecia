@@ -36,7 +36,7 @@ public class CoursePlay {
          * próbuje wejść do naszej sali { firstTrainee.enter(ourRoom) }
          * Operacja ta nie musi zakończyć się powodzeniem.
          */
-        ClassRoom ourRoom = new ClassRoom(20);
+        ClassRoom ourRoom = new ClassRoom(20, 11);
         boolean success = firstTrainee.enter(ourRoom);
         stageDirections("Czy udalo sie wejsc do sali? " + success);
         
@@ -187,6 +187,7 @@ public class CoursePlay {
          * Zastanów się również, czy powinniśmy tutaj, w sztuce tworzyć te wszystkie stoły i krzesła
          * czy może powinny one powstać gdzie indzie? Np. ... w konstruktorze klasy ClassRoom?
          */
+         
          
         // TODO
          
