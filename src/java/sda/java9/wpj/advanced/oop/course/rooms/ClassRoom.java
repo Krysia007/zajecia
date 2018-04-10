@@ -89,6 +89,16 @@ public class ClassRoom {
 		}
 	}
 	
+	public void addTableWithChairs(Table[] tables){
+		for (int i = 0; i < tables.length; i++) {
+			if (tables[i] != null){
+				addTableWithChairs(tables[i]);
+			} else {
+				break;
+			}
+		}
+	}
+	
 	public ClassRoom(int roomSize){
 		trainees = new Trainee[roomSize];
 	}
