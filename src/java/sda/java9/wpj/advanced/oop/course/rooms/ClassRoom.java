@@ -45,7 +45,39 @@ public class ClassRoom {
 		} else {
 			System.out.println("[DEBUG] Nie znaleziono uczestnika: " + trainee.getName());
 		}
-	}	
+	}
+	
+	public void addTable(Table table){
+		Boolean added = false;
+		for (int i = 0; i < this.tables.length; i++){
+			if (this.tables[i] == null) {
+				tables[i] = table;
+				added = true;
+                break;
+			}
+		}
+		if (added = true) {
+			System.out.println("[DEBUG] Dodano stol");
+		} else {
+			System.out.println("[DEBUG] Brak miejsca");
+		}
+	}
+	
+	public void addChair(Chair chair){
+		Boolean added = false;
+		for (int i = 0; i < this.chairs.length; i++){
+			if (this.chairs[i] == null) {
+				chairs[i] = chair;
+				added = true;
+                break;
+			}
+		}
+		if (added = true) {
+			System.out.println("[DEBUG] Dodano krzeslo");
+		} else {
+			System.out.println("[DEBUG] Brak miejsca");
+		}
+	}
 	
 	public ClassRoom(int roomSize){
 		trainees = new Trainee[roomSize];
