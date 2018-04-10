@@ -31,7 +31,7 @@ public class Trainee
 
     public String sayGreetings() {
 		
-		String greet = "No witam witam, dzien dobry";
+		String greet = "No witam witam, dzien dobry" + this.name;
         return greet; 
 	}
 
