@@ -25,9 +25,9 @@ public class ClassRoom {
 			}
 		}
 		if (added = true) {
-			System.out.println("Dodano uczestnika: " + trainee.getName());
+			System.out.println("[DEBUG] Dodano uczestnika: " + trainee.getName());
 		} else {
-			System.out.println("Brak miejsca");
+			System.out.println("[DEBUG] Brak miejsca");
 		}
 		
 	}
@@ -42,9 +42,9 @@ public class ClassRoom {
 			}
 		}
 		if (removed = true) {
-			System.out.println("Usunieto uczestnika: " + trainee.getName());
+			System.out.println("[DEBUG] Usunieto uczestnika: " + trainee.getName());
 		} else {
-			System.out.println("Nie znaleziono uczestnika: " + trainee.getName());
+			System.out.println("[DEBUG] Nie znaleziono uczestnika: " + trainee.getName());
 		}
 	}
 	
