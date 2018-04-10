@@ -12,9 +12,102 @@ public class ClassRoom {
 	private CourseManager courseManager;
 	private Trainee[] trainees;
 	private Trainer trainer;
-	boolean isOpen; 
+	private boolean isOpen; 
+    
+	public void addTrainee(Trainee trainee){
+		Boolean added = false;
+		for (int i = 0; i < this.trainees.length; i++){
+			if (this.trainees[i] == null) {
+				trainees[i] = trainee;
+				added = true;
+                break;
+			}
+		}
+		if (added = true) {
+			System.out.println("[DEBUG] Dodano uczestnika: " + trainee.getName());
+		} else {
+			System.out.println("[DEBUG] Brak miejsca");
+		}
+		
+	}
 	
-	// GETERY
+	public void removeTrainee(Trainee trainee){
+		Boolean removed = false;
+		for (int i = 0; i < this.trainees.length; i++){
+			if (this.trainees[i] == trainee) {
+				trainees[i] = null;
+				removed = true;
+				break;
+			}
+		}
+		if (removed = true) {
+			System.out.println("[DEBUG] Usunieto uczestnika: " + trainee.getName());
+		} else {
+			System.out.println("[DEBUG] Nie znaleziono uczestnika: " + trainee.getName());
+		}
+	}
+	
+	public void addTable(Table table){
+		Boolean added = false;
+		for (int i = 0; i < this.tables.length; i++){
+			if (this.tables[i] == null) {
+				tables[i] = table;
+				added = true;
+                break;
+			}
+		}
+		if (added = true) {
+			System.out.println("[DEBUG] Dodano stol");
+		} else {
+			System.out.println("[DEBUG] Brak miejsca");
+		}
+	}
+	
+	public void addChair(Chair chair){
+		Boolean added = false;
+		for (int i = 0; i < this.chairs.length; i++){
+			if (this.chairs[i] == null) {
+				chairs[i] = chair;
+				added = true;
+                break;
+			}
+		}
+		if (added = true) {
+			System.out.println("[DEBUG] Dodano krzeslo");
+		} else {
+			System.out.println("[DEBUG] Brak miejsca");
+		}
+	}
+	
+	public void addTableWithChairs(Table table){
+		addTable(table);
+		if (table.getFirstChair() != null){
+			addChair(table.getFirstChair());
+		}
+		if (table.getSecondChair() != null){
+			addChair(table.getSecondChair());
+		}
+	}
+	
+	public void addTableWithChairs(Table[] tables){
+		for (int i = 0; i < tables.length; i++) {
+			if (tables[i] != null){
+				addTableWithChairs(tables[i]);
+			} else {
+				break;
+			}
+		}
+	}
+	
+	public ClassRoom(int roomSize){
+		trainees = new Trainee[roomSize];
+	}
+	
+	public ClassRoom (int roomSize, int numberOfTables){
+		trainees = new Trainee[roomSize];
+		tables = new Table[numberOfTables];
+		chairs = new Chair[(2 * numberOfTables)];
+	}
 	
 	public boolean getIsOpen(){
 		return isOpen;
@@ -44,8 +137,6 @@ public class ClassRoom {
 		return trainer;
 	}
 	
-	// SETERY
-	
 	public void setIsOpen(boolean isOpen){
 		this.isOpen = isOpen;
 	}
@@ -73,23 +164,4 @@ public class ClassRoom {
 	public void setTrainer(Trainer trainer){
 		this.trainer = trainer;
 	}
-	
-	// METODY
-	
-	public void addTrainee(Trainee trainee){
-		Boolean added = false;
-		for (int i = 0; i < this.trainees.length; i++){
-			if (this.trainees[i] == null) {
-				trainees[i] = trainee;
-				added = true;
-			}
-		}
-		if (added = true) {
-			System.out.println("Dodano uczestnika: " + trainee.getName());
-		} else {
-			System.out.println("Brak miejsca");
-		}
-		
-	}
-	
 }

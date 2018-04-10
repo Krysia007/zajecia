@@ -1,6 +1,8 @@
 package sda.java9.wpj.advanced.oop.course.people;
 
-import sda.java9.wpj.advanced.oop.course.rooms.ClassRoom;
+import sda.java9.wpj.advanced.oop.course.rooms.*;
+import sda.java9.wpj.advanced.oop.course.content.*;
+import sda.java9.wpj.advanced.oop.course.items.*;
 
 public class Trainee 
 {
@@ -11,13 +13,34 @@ public class Trainee
     private boolean fullTrainiesCup;
     private String trainiesDinner;
     private String trainiesTrener;
-    public boolean ourRoomIsOpen;
-	
+    private ClassRoom classRoom;
+    
+    public String sayGreetings() {
+		
+		String greet = "No witam witam, dzien dobry. Jestem " + this.name;
+        return greet; 
+	}
+
+    public boolean enter(ClassRoom ourRoom) {
+		if (ourRoom.getIsOpen()) {
+			this.classRoom = ourRoom;
+            ourRoom.addTrainee(this);
+            return true;
+		}	
+		else {
+			return false;
+		}
+    }    
 	
     public Trainee() {}
+    
+    public Trainee(String name) {
+        this.name = name;
+    }
 
-    public Trainee (String name, String TrainiesLaptop, boolean attendanceOfTrainee, String lateTrainies, boolean fullTrainiesCup, String TraineesDinner, String traineesTrener)
-    {
+    public Trainee (String name, String TrainiesLaptop, boolean attendanceOfTrainee, 
+                    String lateTrainies, boolean fullTrainiesCup, String TraineesDinner, 
+                    String traineesTrener) {
         this.name = name;
         this.trainiesLaptop = trainiesLaptop; 
         this.attendanceOfTrainee = attendanceOfTrainee;
@@ -27,8 +50,8 @@ public class Trainee
         this.trainiesTrener = trainiesTrener;
             
     }
-    
 
+<<<<<<< HEAD
     public String sayGreetings() {
 		
 		String greet = "No witam witam, dzien dobry" + this.name;
@@ -50,47 +73,41 @@ public class Trainee
 
     public String getName ()
     {
+=======
+    public String getName () {
+>>>>>>> 09e150060333d47adab127fc84a38e481509893a
         return name;
     }
 
-    public String getTrainiesLaptop ()
-    {
+    public String getTrainiesLaptop () {
         return trainiesLaptop;
     }
 
-    public boolean getAttendanceOfTrainee ()
-    {
+    public boolean getAttendanceOfTrainee () {
         return attendanceOfTrainee;
     }
 
-    public boolean getFullTrainiesCup ()
-    {
+    public boolean getFullTrainiesCup () {
         return fullTrainiesCup;
     }
 
-    public String getTrainiesTrener ()
-    {
+    public String getTrainiesTrener () {
         return trainiesTrener;
     }
 
-    public String getTrainiesDinner ()
-    {
+    public String getTrainiesDinner () {
         return trainiesDinner;
     }
 
-    public void setName (String name)
-    {
+    public void setName (String name) {
         this.name = name;
     }
 
-    public void setTrainiesLaptop (String name)
-    {
+    public void setTrainiesLaptop (String name) {
         this.trainiesLaptop = trainiesLaptop;
     }
 
-public void setTrainiesDinner (String name)
-{
-	this.trainiesDinner = trainiesDinner;
-}
-    
+    public void setTrainiesDinner (String name) {
+        this.trainiesDinner = trainiesDinner;
+    }
 }
